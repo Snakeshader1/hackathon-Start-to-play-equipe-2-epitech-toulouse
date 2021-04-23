@@ -1,44 +1,81 @@
 *{
 	margin: 0%;
-}	
+}
 body{
-	background-color: #232728;
+	background-color: #000;
 }
-div.head h1{
+header h1{
 	display: inline-block;
-	width: 20%;
-	color: #ffffff;
-	font-size: 200%;
-	text-align: center;
+	color: #fff;
 }
-header{
-	background-color: #000000;
-	position: -webkit-sticky;
-	position: sticky;
-	top: 0px;
+#logo {
+    position: absolute;
+    width: 206px;
+    height: 41.56px;
+    left: 5%;
+    top: 6px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 45px;
+    line-height: 53px;
+    text-align: center;
+
+    color: #E8E6E3;
 }
-div.presentation h1{
-	text-align: center;
-	font-size: 50px;
-	color: white;
+#home {
+	position: absolute;
+    width: 206px;
+    height: 41.56px;
+    left: 25%;
+    top: 6px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 45px;
+    line-height: 53px;
+    text-align: center;
+
+    color: #E8E6E3;
 }
-div.presentation p.titre{
-	font-family: sansation;
-	font-size: 500%;
-	text-align: center;
-	color: white;
+#ticket {
+	position: absolute;
+    width: 256px;
+    height: 41.56px;
+    left: 45%;
+    top: 6px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 45px;
+    line-height: 53px;
+    text-align: center;
+
+    color: #E8E6E3;
 }
-h1.a{
-	text-decoration: underline;
+#account{
+	position: absolute;
+    width: 272px;
+    height: 41.56px;
+    left: 65%;
+    top: 6px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 45px;
+    line-height: 53px;
+    text-align: center;
+
+    color: #E8E6E3;
 }
-h1.b:hover{
-	text-decoration: underline;
-}
-div.presentation p.slogan{
-	text-align: center;
-	color: white;
-	font-size: 30px;
-}
-div.contenue{
-	margin: 10%;
+#search {
+	position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 90%;
+    top: 6px;
 }
