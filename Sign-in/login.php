@@ -10,10 +10,6 @@ catch (Exception $e)
         die('Erreur : ' . $e->getMessage());
 }
 
-$_POST['password'] = "Theo";
-$_POST['email'] = "Theos123@hotmail.fr";
-
-
 if (!empty($_POST['password']) AND !empty($_POST['email'])){
 
    echo "OUi" ;
