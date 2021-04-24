@@ -2,7 +2,7 @@
 
 $bdd = new PDO('mysql:host=localhost;dbname=hackathon;charset=utf8', 'root', '');
 
-$_COOKIE['Name'] = "Sacha"; 
+$_COOKIE['Name'] = "Sasha"; 
 
 
 ?>
@@ -10,9 +10,9 @@ $_COOKIE['Name'] = "Sacha";
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My account</title>
+	<title>My account - transaction</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="transaction.css">
+	<link rel="stylesheet" type="text/css" href="account_style.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
@@ -45,11 +45,10 @@ $_COOKIE['Name'] = "Sacha";
 	<div id="box">
 		<div id="account_overview">
 			<p>Account overview</p>
+			<div id="petitcube"></div>
 		</div>
 		<div id="transaction">
 			<p>Transactions</p>
-			<div id="petitcube"></div>
-
 		</div>
 		<div id="security">
 			<p>Account security</p>
@@ -63,33 +62,45 @@ $_COOKIE['Name'] = "Sacha";
 ?></p>
 	</div>
 	<h2>
-		Your transaction :
+		Your tickets :
 	</h2>
 
 <!-- ------------------------------------------------------------------------------------------------ -->
 
+	<?php 
 
-<?php 
-
-// $req = $bdd->query('SELECT * FROM billet');
-
-
-$req = $bdd->prepare('SELECT * FROM billet WHERE Name = ?');
-$req->execute(array($_COOKIE['Name']));
-
-while ($donnees = $req->fetch()) {
-
-?>
+	// $req = $bdd->query('SELECT * FROM billet');
 
 
-	<div class=tickets>
+	$req = $bdd->prepare('SELECT * FROM billet WHERE Name = ?');
+	$req->execute(array($_COOKIE['Name']));
+
+	while ($donnees = $req->fetch()) {
+
+	?>
+
+	<div class="tickets">
 		<div class="a">
-			<p>From : <?php echo $donnees['Depart']?> => To : <?php echo $donnees['Arrive']?> | <?php echo $donnees['Date']?> | <?php echo $donnees['Boarding_time']?></p>
+			<p>From : <?php echo $donnees['Depart'];?></p>
+			<p>To : <?php echo $donnees['Arrive'];?></p>
+			<p>Est. duration :</p>
+			<p><?php echo $donnees['Est_duration'];?></p>
 		</div>
 		<div class="b">
-			<p>120€</p> 
+			<p>Seat : <?php echo $donnees['Seat'];?></p>
+			<p>Gate : <?php echo $donnees['Gate'];?></p>
+			<p>BOARDING TIME :</p>
+			<p><?php echo $donnees['Boarding_time'];?></p>
+		</div>
+		<div class="c">
+			<p>Name : <?php echo $donnees['Name'];?></p>
+			<p>Date : <?php echo $donnees['Date'];?></p>
+			<p>Pass number : </p>
+			<p><?php echo $donnees['Pass number'];?></p>
+		</div>
+		<div class="d">
+			<img src="img/qrcode.png" width="170px" height="170px">
 		</div>
 	</div>
-
-<?php } ?>
+	<?php } ?>
 </body>
