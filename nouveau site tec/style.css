@@ -35,6 +35,9 @@ header{
 	font-weight: normal;
 	font-size: 28px;
 }
+#home p{
+	text-decoration: underline;
+}
 #tickets{
 	float: left;
 	width: 22%;
@@ -44,6 +47,9 @@ header{
 	font-weight: normal;
 	font-size: 28px;
 }
+#tickets p:hover{
+	text-decoration: underline;
+}
 #account{
 	float: left;
 	width: 22%;
@@ -52,6 +58,9 @@ header{
 	font-style: normal;
 	font-weight: normal;
 	font-size: 28px;
+}
+#account p:hover{
+	text-decoration: underline;
 }
 #loupe{
 	float: right;
