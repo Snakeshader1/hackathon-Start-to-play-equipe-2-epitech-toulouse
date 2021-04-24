@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'Sansation';
-	font-style: normal;
+	font-size: normal;
 	font-weight: normal;
 	src: local('Sansation'), url('Sansation_Regular.woff') format('woff');
 }
@@ -92,13 +92,14 @@ header{
 #presentation h1{
 	font-family: Roboto;
 	color: white;
-	z-index: 3;
 }
 #textimg{
 	overflow: auto;
 }
-#description{
-	float: left;
+#description h1{
+	padding-left: 90px;
+	position: relative;
+	z-index: 3;
 }
 #textimg img{
 	position: absolute;
