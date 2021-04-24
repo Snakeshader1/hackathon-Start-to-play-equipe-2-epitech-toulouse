@@ -39,8 +39,12 @@ header{
 	font-weight: normal;
 	font-size: 28px;
 }
-#home p:hover{
+#home a:hover{
 	text-decoration: underline;
+}
+#home a{
+	text-decoration: none;
+	color: white;
 }
 #tickets{
 	float: left;
