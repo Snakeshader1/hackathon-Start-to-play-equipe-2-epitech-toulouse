@@ -17,6 +17,7 @@ header{
 	z-index: 4;
 }
 #hyperloop{
+	padding-left: 30px;
 	float: left;
 	width: 22%;
 	padding-top: 1%;
@@ -80,7 +81,7 @@ header{
 }
 #presentation{
 	background-color: black;
-	height: 900px;
+	height: 1000px;
 }
 #presentation p{
 	color: white;
@@ -100,12 +101,14 @@ header{
 	padding-left: 90px;
 	position: relative;
 	z-index: 3;
+	padding-top: 120px;
 }
 #textimg img{
 	position: absolute;
 	top: 1000px;
 	right: 30px;
 	z-index: 1;
+	padding-top: 120px;
 }
 #video{
 	background-color: #232728;
@@ -113,11 +116,21 @@ header{
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
+#video p{
+	text-align: center;
+	font-size: 45px;
+	font-family: Roboto;
+	color: white;
+}
+#video iframe{
+	padding-top: 35px;
+}
 #button p{
 	font-family: Fira Sans;
 	text-align: center;
 	color: white;
 	font-size: 150px;
+	border: solid white 2px;
 }
 #button{
 	height: 350px;
@@ -126,13 +139,13 @@ header{
 }
 #global{
 	height: 100px;
-	width: 95%;
+	width: 100%;
 	background-color: #232728;
 	color: white;
 }
 footer div{
 	display: inline-block;
 	width: 20%;
-	padding-left: 5%;
 	padding-top: 1%;
+	text-align: center;
 }
