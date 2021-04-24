@@ -10,7 +10,7 @@ $_COOKIE['Name'] = "Sasha";
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My account</title>
+	<title>My account - transaction</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="account_style.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
