@@ -9,6 +9,7 @@
 }
 body{
 	background-color: black;
+	font-family: Roboto;
 }
 header{
 	overflow: auto;
@@ -117,7 +118,7 @@ header{
 	left: 13px;
 	top: 223px;
 }
-p{
+#box p{
 	padding-top: 10px;
 	padding-left: 10px;	
 }
@@ -125,4 +126,56 @@ p{
 	border: solid 2px;
 	border-radius: 10px;
 	border-color: #3C3C3C;
+}
+#petitcube{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 250px;
+	bottom: 11px;
+	background-color: #222627;
+}
+#title{
+	padding-top: 200px;
+	text-align: center;
+	color: white;
+	font-size: 45px;
+}
+h2{
+	padding-left: 30%;
+	color: white;
+	padding-top: 20px;
+}
+.tickets{
+	background-color: #1D2021;
+	position: absolute;
+	width: 60%;
+	height: 25%;
+	left: 430px;
+	top: 322px;
+	color: white;
+}
+#a{
+	font-size: 20px;
+	line-height: 45px;
+	padding-left: 10px;
+	float: left;
+}
+#b{
+	font-size: 20px;
+	line-height: 45px;
+	padding-left: 70px;
+	float: left;
+}
+#c{
+	font-size: 20px;
+	line-height: 45px;
+	padding-left: 70px;
+	float: left;
+}
+#d{
+	line-height: 45px;
+	padding-left: 70px;
+	float: left;
+	padding-top: 5px;
 }
