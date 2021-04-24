@@ -59,11 +59,7 @@ header{
 	font-weight: normal;
 	font-size: 28px;
 }
-#account a{
-	color: white;
-	text-decoration: none;
-}
-#account a:hover{
+#account p:hover{
 	text-decoration: underline;
 }
 #loupe{

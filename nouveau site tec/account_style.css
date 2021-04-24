@@ -39,12 +39,8 @@ header{
 	font-weight: normal;
 	font-size: 28px;
 }
-#home a:hover{
+#home p:hover{
 	text-decoration: underline;
-}
-#home a{
-	text-decoration: none;
-	color: white;
 }
 #tickets{
 	float: left;
@@ -152,34 +148,47 @@ h2{
 }
 .tickets{
 	background-color: #1D2021;
-	position: absolute;
+
+	display: flex;
+	justify-content: space-between;
+
 	width: 60%;
 	height: 25%;
-	left: 430px;
-	top: 322px;
+	margin-left: 430px;
 	color: white;
+	margin-top: 50px;
 }
-#a{
+.a{
+	margin-top: 5px;
 	font-size: 20px;
 	line-height: 45px;
 	padding-left: 10px;
+	padding-right: 20px;
 	float: left;
+	border-right: solid black 3px;
+
 }
-#b{
+.b{
+	margin-top: 5px;
 	font-size: 20px;
 	line-height: 45px;
-	padding-left: 70px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-right: solid black 3px;
 	float: left;
 }
-#c{
+.c{
 	font-size: 20px;
 	line-height: 45px;
-	padding-left: 70px;
+	padding-right: 20px;
+	padding-left: 20px;
 	float: left;
+	border-right: solid black 3px;
+
 }
-#d{
+.d{
 	line-height: 45px;
-	padding-left: 70px;
+	padding-left: 50px;
 	float: left;
 	padding-top: 5px;
 }
