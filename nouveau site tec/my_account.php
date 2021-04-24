@@ -1,5 +1,11 @@
-<<<<<<< HEAD:nouveau site tec/my_account.php
-<?php ?>
+<?php 
+
+$bdd = new PDO('mysql:host=localhost;dbname=hackathon;charset=utf8', 'root', '');
+
+$_COOKIE['Name'] = "Sasha"; 
+
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -52,146 +58,49 @@
 		</div>
 	</div>
 	<div id="title">
-		<p>Welcome, username</p>
+		<p>Welcome, <?php echo $_COOKIE['Name']; 
+?></p>
 	</div>
 	<h2>
 		Your tickets :
 	</h2>
 
-	<?php ?>
+<!-- ------------------------------------------------------------------------------------------------ -->
+
+	<?php 
+
+	// $req = $bdd->query('SELECT * FROM billet');
+
+
+	$req = $bdd->prepare('SELECT * FROM billet WHERE Name = ?');
+	$req->execute(array($_COOKIE['Name']));
+
+	while ($donnees = $req->fetch()) {
+
+	?>
 
 	<div class="tickets">
 		<div class="a">
-			<p>From : Paris - France</p>
-			<p>To : Toulouse - France</p>
+			<p>From : <?php echo $donnees['Depart'];?></p>
+			<p>To : <?php echo $donnees['Arrive'];?></p>
 			<p>Est. duration :</p>
-			<p>678km - 37 minutes</p>
+			<p><?php echo $donnees['Est_duration'];?></p>
 		</div>
 		<div class="b">
-			<p>Seat : 5A</p>
-			<p>Gate : A75</p>
+			<p>Seat : <?php echo $donnees['Seat'];?></p>
+			<p>Gate : <?php echo $donnees['Gate'];?></p>
 			<p>BOARDING TIME :</p>
-			<p>07:45 UTC+1</p>
+			<p><?php echo $donnees['Boarding_time'];?></p>
 		</div>
 		<div class="c">
-			<p>Name : Didier Didier</p>
-			<p>Date : 20/04/2022</p>
-			<p>Pass number :</p>
-			<p>HPT 5782 5842354</p>
+			<p>Name : <?php echo $donnees['Name'];?></p>
+			<p>Date : <?php echo $donnees['Date'];?></p>
+			<p>Pass number : </p>
+			<p><?php echo $donnees['Pass number'];?></p>
 		</div>
 		<div class="d">
 			<img src="img/qrcode.png" width="170px" height="170px">
 		</div>
 	</div>
-	
+	<?php } ?>
 </body>
-=======
-<!DOCTYPE html>
-<html>
-<head>
-	<title>My account</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="account_style.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-</head>
-<body>
-	<header>
-		<div id="hyperloop">
-			<p>
-				hyperloop
-			</p>
-		</div>
-		<div id="home">
-			<a href="index.html">Home</a>
-		</div>
-		<div id="tickets">
-			<p>
-				Buy tickets
-			</p>
-		</div>
-		<div id="account">
-			<p>
-				My account
-			</p>
-		</div>
-		<div id="loupe">
-			<img src="img/loupe.png" width="37px" height="33px">
-		</div>
-	</header>
-	<div id="box">
-		<div id="account_overview">
-			<p>Account overview</p>
-			<div id="petitcube"></div>
-		</div>
-		<div id="transaction">
-			<p>Transactions</p>
-		</div>
-		<div id="security">
-			<p>Account security</p>
-		</div>
-		<div id="information">
-			<p>My informations</p>
-		</div>
-	</div>
-	<div id="title">
-		<p>Welcome, username</p>
-	</div>
-	<h2>
-		Your tickets :
-	</h2>
-	<div class="tickets">
-		<div class="a">
-			<p>From : Paris - France</p>
-			<p>To : Toulouse - France</p>
-			<p>Est. duration :</p>
-			<p>678km - 37 minutes</p>
-		</div>
-		<div class="b">
-			<p>Seat : 5A</p>
-			<p>Gate : A75</p>
-			<p>BOARDING TIME :</p>
-			<p>07:45 UTC+1</p>
-		</div>
-		<div class="c">
-			<p>Name : Didier Didier</p>
-			<p>Date : 20/04/2022</p>
-			<p>Pass number :</p>
-			<p>HPT 5782 5842354</p>
-		</div>
-		<div class="d">
-			<img src="img/qrcode.png" width="170px" height="170px">
-		</div>
-	</div>
-
-	<div class="tickets">
-		<div class="a">
-			<p>From : Paris - France</p>
-			<p>To : Toulouse - France</p>
-			<p>Est. duration :</p>
-			<p>678km - 37 minutes</p>
-		</div>
-		<div class="b">
-			<p>Seat : 5A</p>
-			<p>Gate : A75</p>
-			<p>BOARDING TIME :</p>
-			<p>07:45 UTC+1</p>
-		</div>
-		<div class="c">
-			<p>Name : Didier Didier</p>
-			<p>Date : 20/04/2022</p>
-			<p>Pass number :</p>
-			<p>HPT 5782 5842354</p>
-		</div>
-		<div class="d">
-			<img src="img/qrcode.png" width="170px" height="170px">
-		</div>
-	</div>
-	<div id="button_left">
-		<p>Cancel your tickets</p>
-	</div>
-	<div id="button_right">
-		<p>Exchange your tickets</p>
-	</div>
-</body>
->>>>>>> 13534cbd3744cbe9452b78f38b65e780fa281155:nouveau site tec/my_account.html
-</html>
