@@ -39,8 +39,12 @@ header{
 	font-weight: normal;
 	font-size: 28px;
 }
-#home p:hover{
+#home a:hover{
 	text-decoration: underline;
+}
+#home a{
+	text-decoration: none;
+	color: white;
 }
 #tickets{
 	float: left;
@@ -204,4 +208,21 @@ h2{
 	padding-right: 4%;
 	float: left;
 	padding-top: 5px;
+}
+#button_left{
+	position: relative;
+	width: 170px;
+	height: 30px;
+	background-color: #3C3C3C;
+	margin-left: 500px;
+	margin-top: 30px;
+	float: left;
+}
+#button_right{
+	position: relative;
+	width: 170px;
+	height: 30px;
+	background-color: #3C3C3C;
+	margin-left: 1000px;
+	float: left;
 }
