@@ -1,18 +1,25 @@
-/*fonts*/
-
 @font-face {
 	font-family: 'Sansation';
 	font-size: normal;
 	font-weight: normal;
 	src: local('Sansation'), url('Sansation_Regular.woff') format('woff');
 }
+@font-face {
+	font-family: 'Roboto';
+	font-size: normal;
+	font-weight: normal;
+	src: local('Roboto'), url('roboto-v27-latin-regular.woff') format('woff');
+}
 
-/* Header */
+
+
 
 *{
 	margin: 0%;
 }
-
+body{
+	background-color: black;
+}
 header{
 	overflow: auto;
 	background-color: #1C1F20;
@@ -41,10 +48,9 @@ header{
 	font-weight: normal;
 	font-size: 28px;
 }
-#account p{
+#home p:hover{
 	text-decoration: underline;
 }
-
 #tickets{
 	float: left;
 	width: 22%;
@@ -54,11 +60,9 @@ header{
 	font-weight: normal;
 	font-size: 28px;
 }
-
 #tickets p:hover{
 	text-decoration: underline;
 }
-
 #account{
 	float: left;
 	width: 22%;
@@ -68,20 +72,76 @@ header{
 	font-weight: normal;
 	font-size: 28px;
 }
-
-#account p:hover{
+#account p{
 	text-decoration: underline;
 }
-
 #loupe{
 	float: right;
 	width: 5%;
 	padding-top: 2%;
 }
 
-/* Main page*/
+#box{
+	position: absolute;
+	position: absolute;
+	width: 357px;
+	height: 299px;
+	left: 38px;
+	top: 288px;
+	background-color: #1C1F20;
+	color: white;
+	font-size: 30px;
+	border: solid 2px;
+	border-radius: 10px;
+	border-color: #1C1F20;
+}
+#box #account_overview{
+	background-color: #3C3C3C;
+	position: absolute;
+	width: 328px;
+	height: 61px;
+	left: 13px;
+	top: 10px;
+}
+#box #transaction{
+	background-color: #3C3C3C;
+	position: absolute;
+	width: 328px;
+	height: 61px;
+	left: 13px;
+	top: 81px;
+}
+#box #security{
+	background-color: #3C3C3C;
+	position: absolute;
+	width: 328px;
+	height: 61px;
+	left: 13px;
+	top: 152px;
+}
+#box #information{
+	background-color: #3C3C3C;
+	position: absolute;
+	width: 328px;
+	height: 61px;
+	left: 13px;
+	top: 223px;
+}
+p{
+	padding-top: 10px;
+	padding-left: 10px;	
+}
+#box div{
+	border: solid 2px;
+	border-radius: 10px;
+	border-color: #3C3C3C;
+}
 
-#transaction {
+/* Welcome*/
+
+
+#Welcome {
+	font-family: Sansation;
     padding-top: 100px;
     background-color: black;
     width: auto;
@@ -91,10 +151,62 @@ header{
 #welcome {    
     
 	width: auto;
-    margin-top: 100px;
+    margin-top: 70px;
     text-align: center;
 
     font: 100px;
     color: yellow;
     color: white;
+}
+
+/* Transaction */
+
+#Transaction {
+	position: absolute;
+	width: 280px;
+	height: 85px;
+	left: 440px;
+	top: 240px;
+
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 35px;
+	display: flex;
+	align-items: center;
+
+	color: #E8E6E3;
+}
+
+.Order {
+	font-family: Roboto;
+	font-size: 20px;
+
+	color: #E8E6E3;
+
+}
+
+.Price {
+
+	position: absolute;
+	width: 1256px;
+	height: 0px;
+	left: 448px;
+	top: 343px;
+
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 35px;
+	display: flex;
+	text-align: right;
+
+	color: #E8E6E3;
+}
+
+.hide {
+	color: black;
+
 }
