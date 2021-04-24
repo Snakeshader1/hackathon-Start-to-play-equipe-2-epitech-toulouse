@@ -12,7 +12,6 @@ catch (Exception $e)
 
 if (!empty($_POST['password']) AND !empty($_POST['email'])){
 
-   echo "OUi" ;
     $mdp = $_POST['password'];
     $email = $_POST['email'];
 
@@ -22,11 +21,19 @@ if (!empty($_POST['password']) AND !empty($_POST['email'])){
     $req->execute(array($email));
 
     while ($donne = $req->fetch()) {
-        if ($mdp == $donne['Pass']) {
-            echo "Reussit !!";
-        }
+      if ($mdp == $donne['Pass']) {
+         setcookie('email', $email, time() + 365*24*3600,'/', null, false, true);
+         echo "connexion reussit !";
+         $Log = "1";
+      }
+      
+      if (empty($Log)) {
+         echo "La connexion a échoué";
+      }
     }
 }
+
+
 
 ?>
 

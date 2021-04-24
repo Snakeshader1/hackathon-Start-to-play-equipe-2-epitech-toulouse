@@ -1,39 +1,9 @@
 <?php
 
-try
-{
-	$bdd = new PDO('mysql:host=localhost;dbname=hackathon;charset=utf8', 'root', '');
+if (isset($_COOKIE['email'])) {
+    echo $_COOKIE['email'];
 
 }
-catch (Exception $e)
-{
-        die('Erreur : ' . $e->getMessage());
-}
-
-
-$_POST['pass'] = "Theo";
-$_POST['email'] = "snakesahder@gmail.com";
-
-
-if (!empty($_POST['pass']) AND !empty($_POST['email'])){
-
-    $mdp = $_POST['pass'];
-    $email = $_POST['email'];
-
-    // On affiche chaque entrée une à une
-
-    $req = $bdd->prepare('SELECT Email,Pass FROM account WHERE Email = ?');
-    $req->execute(array($email));
-
-    while ($donne = $req->fetch()) {
-        if ($mdp == $donne['Pass']) {
-            echo "Reussit !!";
-        }
-    }
-}
-
-
-
 
 
 ?>
@@ -47,6 +17,17 @@ if (!empty($_POST['pass']) AND !empty($_POST['email'])){
 </head>
 <body>
     <?php 
+
+    try
+    {
+        $bdd = new PDO('mysql:host=localhost;dbname=hackathon;charset=utf8', 'root', '');
+
+    }
+    catch (Exception $e)
+    {
+            die('Erreur : ' . $e->getMessage());
+    }
+
     // On récupère tout le contenu de la table jeux_video
     $reponse = $bdd->query('SELECT * FROM account');
 
@@ -55,9 +36,7 @@ if (!empty($_POST['pass']) AND !empty($_POST['email'])){
     {
     ?>
         <p>
-        <strong>Id : </strong> <?php echo $donnees['Id']; ?><br />
-        username : <?php echo $donnees['Username']; ?>, name : <?php echo $donnees['Name'];?>, et Mdp : <?php echo $donnees['Pass'] ?><br />
-        Email <?php echo $donnees['Email']; ?> et on peut y jouer à <?php echo $donnees['Year_old']; ?> au maximum<br />
+        <strong>Email : <?php echo $_COOKIE['email'];?></strong>
         </p>
     <?php } ?>
 
@@ -67,12 +46,6 @@ if (!empty($_POST['pass']) AND !empty($_POST['email'])){
     <input type="text" name="pass" id="pass" placeholder="pass" size="30" maxlength="255" />
     <!-- <input type="text" name="pseudo" id="pseudo" placeholder="email" size="30" maxlength="255" />
     <input type="text" name="pseudo" id="pseudo" placeholder="email" size="30" maxlength="255" /> -->
-
-
-<?php 
-
-
-?>
 
 </body>
 </html>
