@@ -142,7 +142,7 @@ header{
 	font-size: 45px;
 }
 h2{
-	padding-left: 30%;
+	padding-left: 23%;
 	color: white;
 	padding-top: 20px;
 }
@@ -150,45 +150,58 @@ h2{
 	background-color: #1D2021;
 
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 
 	width: 60%;
 	height: 25%;
-	margin-left: 430px;
+	margin-left: 450px;
 	color: white;
-	margin-top: 50px;
+	margin-top: 30px;
+	margin-bottom: 50px;
+
 }
 .a{
+	
 	margin-top: 5px;
+	margin-bottom: 5px;
 	font-size: 20px;
 	line-height: 45px;
-	padding-left: 10px;
-	padding-right: 20px;
+	padding-left: 4%;
+	padding-right: 4%;
 	float: left;
 	border-right: solid black 3px;
 
 }
 .b{
 	margin-top: 5px;
+	margin-bottom: 5px;
 	font-size: 20px;
 	line-height: 45px;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: 4%;
+	padding-right: 4%;
 	border-right: solid black 3px;
 	float: left;
 }
 .c{
+	
+	margin-top: 5px;
+	margin-bottom: 5px;
 	font-size: 20px;
 	line-height: 45px;
-	padding-right: 20px;
-	padding-left: 20px;
+	padding-left: 4%;
+	padding-right: 4%;
+
 	float: left;
 	border-right: solid black 3px;
 
 }
 .d{
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	line-height: 45px;
-	padding-left: 50px;
+	padding-left: 4%;
+	padding-right: 4%;
 	float: left;
 	padding-top: 5px;
 }
