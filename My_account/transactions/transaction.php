@@ -70,11 +70,11 @@ $_COOKIE['Name'] = "Sacha";
 
 <?php 
 
-$req = $bdd->query('SELECT * FROM billet');
+// $req = $bdd->query('SELECT * FROM billet');
 
 
-// $req = $bdd->prepare('SELECT * FROM billet WHERE Name = ?');
-// $req->execute(array($_COOKIE['Name']));
+$req = $bdd->prepare('SELECT * FROM billet WHERE Name = ?');
+$req->execute(array($_COOKIE['Name']));
 
 while ($donnees = $req->fetch()) {
 
@@ -83,10 +83,10 @@ while ($donnees = $req->fetch()) {
 
 	<div class=tickets>
 		<div class="a">
-			<p>From : <?php echo $donnees['Depart']?>/ To : <?php echo $donnees['Arrive']?> | <?php echo $donnees['Date']?> | <?php echo $donnees['Boarding_time']?></p>
+			<p>From : <?php echo $donnees['Depart']?> => To : <?php echo $donnees['Arrive']?> | <?php echo $donnees['Date']?> | <?php echo $donnees['Boarding_time']?></p>
 		</div>
 		<div class="b">
-			<p>120€</p>
+			<p>120€</p> 
 		</div>
 	</div>
 
