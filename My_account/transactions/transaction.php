@@ -2,7 +2,7 @@
 
 $bdd = new PDO('mysql:host=localhost;dbname=hackathon;charset=utf8', 'root', '');
 
-$_COOKIE['Name'] = "Sasha"; 
+$_COOKIE['Name'] = "Sacha"; 
 
 
 ?>
@@ -67,40 +67,28 @@ $_COOKIE['Name'] = "Sasha";
 
 <!-- ------------------------------------------------------------------------------------------------ -->
 
-	<?php 
 
-	// $req = $bdd->query('SELECT * FROM billet');
+<?php 
+
+$req = $bdd->query('SELECT * FROM billet');
 
 
-	$req = $bdd->prepare('SELECT * FROM billet WHERE Name = ?');
-	$req->execute(array($_COOKIE['Name']));
+// $req = $bdd->prepare('SELECT * FROM billet WHERE Name = ?');
+// $req->execute(array($_COOKIE['Name']));
 
-	while ($donnees = $req->fetch()) {
+while ($donnees = $req->fetch()) {
 
-	?>
+?>
 
-	<div class="tickets">
+
+	<div class=tickets>
 		<div class="a">
-			<p>From : <?php echo $donnees['Depart'];?></p>
-			<p>To : <?php echo $donnees['Arrive'];?></p>
-			<p>Est. duration :</p>
-			<p><?php echo $donnees['Est_duration'];?></p>
+			<p>From : <?php echo $donnees['Depart']?>/ To : <?php echo $donnees['Arrive']?> | <?php echo $donnees['Date']?> | <?php echo $donnees['Boarding_time']?></p>
 		</div>
 		<div class="b">
-			<p>Seat : <?php echo $donnees['Seat'];?></p>
-			<p>Gate : <?php echo $donnees['Gate'];?></p>
-			<p>BOARDING TIME :</p>
-			<p><?php echo $donnees['Boarding_time'];?></p>
-		</div>
-		<div class="c">
-			<p>Name : <?php echo $donnees['Name'];?></p>
-			<p>Date : <?php echo $donnees['Date'];?></p>
-			<p>Pass number : </p>
-			<p><?php echo $donnees['Pass number'];?></p>
-		</div>
-		<div class="d">
-			<img src="img/qrcode.png" width="170px" height="170px">
+			<p>120€</p>
 		</div>
 	</div>
-	<?php } ?>
+
+<?php } ?>
 </body>

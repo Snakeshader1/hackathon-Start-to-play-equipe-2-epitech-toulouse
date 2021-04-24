@@ -149,63 +149,43 @@ h2{
 	padding-left: 23%;
 	color: white;
 	padding-top: 20px;
+	margin-bottom: 30px;
+
 }
+
+/* Main page*/
+
 .tickets{
-	background-color: #1D2021;
+	background-color: #000000;
 
 	display: flex;
 	justify-content: flex-start;
 
 	width: 60%;
 	height: 25%;
-	margin-left: 450px;
+	margin-left: 500px;
 	color: white;
-	margin-top: 30px;
-	margin-bottom: 50px;
+	border-bottom: #111111 solid 7px;
 
 }
 .a{
-	
+
+	width: 100%;
+
 	margin-top: 5px;
 	margin-bottom: 5px;
 	font-size: 20px;
 	line-height: 45px;
-	padding-left: 4%;
-	padding-right: 4%;
+	padding-left: 1%;
 	float: left;
-	border-right: solid black 3px;
 
 }
 .b{
-	margin-top: 5px;
-	margin-bottom: 5px;
-	font-size: 20px;
-	line-height: 45px;
-	padding-left: 4%;
-	padding-right: 4%;
-	border-right: solid black 3px;
-	float: left;
-}
-.c{
-	
-	margin-top: 5px;
-	margin-bottom: 5px;
-	font-size: 20px;
-	line-height: 45px;
-	padding-left: 4%;
-	padding-right: 4%;
 
-	float: left;
-	border-right: solid black 3px;
-
-}
-.d{
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	justify-content: flex-end;
 	line-height: 45px;
-	padding-left: 4%;
-	padding-right: 4%;
+	padding-right: 1%;
 	float: left;
 	padding-top: 5px;
 }
