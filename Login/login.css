@@ -1,0 +1,297 @@
+@font-face {
+	font-family: 'Sansation';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Sansation'), url('Sansation_Regular.woff') format('woff');
+}
+*{
+	margin: 0%;
+}
+body{
+    background-color: black;
+}
+nav{
+	overflow: auto;
+	background-color: #1C1F20;
+	height: 90px;
+	width: 100%;
+	position: fixed;
+	color: white;
+}
+#hyperloop{
+	float: left;
+	width: 22%;
+	padding-top: 1%;
+	font-family: Sansation;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 45px;
+}
+#home{
+	float: left;
+	width: 22%;
+	padding-top: 2%;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 28px;
+}
+#tickets{
+	float: left;
+	width: 22%;
+	padding-top: 2%;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 28px;
+}
+#account{
+	float: left;
+	width: 22%;
+	padding-top: 2%;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 28px;
+}
+
+#loupe{
+	float: right;
+	width: 1px;
+    margin-right: 200px;
+    padding-top: 2%;
+}
+#para{
+    padding-top: 8%;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+#form{
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+    font-size: 25px;
+}
+#formail{
+    border-radius: 10px;
+    font-size: 25px;
+}
+#forpass{
+    border-radius: 10px;
+    font-size: 25px;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+.container {
+    display: block;
+    position: relative;
+    padding-left: 80px;
+    margin-top: 17px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+ 
+  .checkmark {
+    position: absolute;
+    top: 4.9px;
+    left: 880px;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+ 
+  .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+ 
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+ 
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+ 
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .button{
+      position:absolute;
+      top: 385px;
+      background:url(button.PNG);
+      width: 36px;
+      height: 36px;
+      margin-left: 1130px;
+      border-color: rgba(0, 0, 0, 255);
+  }
+
+  #para2{
+      text-align: center;
+      margin-top: 80px;
+      color:white;
+      font-size: 25px;
+  }
+  #form2{
+      color: white;
+      text-align: center;
+      margin-top: 50px;
+      font-size: 25px;
+  }
+  #forusername{
+      font-size: 25px;
+      border-radius: 10px;
+      margin-right: 40px;
+  }
+  #formail1{
+      font-size: 25px;
+      border-radius: 10px;
+      margin-right: 9px;
+      margin-top: 20px;
+  }
+  #forname{
+      font-size: 25px;
+      border-radius: 10px;
+      margin-right: 3px;
+      margin-top: 20px;
+  }
+  #forpass1{
+    font-size: 25px;
+    border-radius: 10px;
+    margin-right: 35px;
+    margin-top: 20px;
+  }
+  #forconfirmpass{
+    font-size: 25px;
+    border-radius: 10px;
+    margin-right: 130px;
+    margin-top: 20px;
+  }
+  #forage{
+    font-size: 20px;
+    width: 55px;
+    height: 30px;
+    border-radius: 10px;
+    margin-right: 190px;
+    margin-top: 20px;
+    
+  }
+  #ageco{
+      position: absolute;
+      left: 780px;
+      margin-top: 20px;
+  }
+  .container1 {
+    position: absolute;
+    display: block;
+    position: relative;
+    padding-left: 960px;
+    bottom: 30px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: white;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container1 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark1 {
+    position: absolute;
+    bottom: 4px;
+    left: 930px;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container1:hover input ~ .checkmark1 {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container1 input:checked ~ .checkmark1 {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark1:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container1 input:checked ~ .checkmark1:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container1 .checkmark1:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .button1{
+    position:absolute;
+    top: 950px;
+    right: 750px;
+    width: 350px;
+    height: 50px;
+    border-color: grey;
+    color: black;
+    border-radius: 25px;
+    background-color: grey;
+    font-family: roboto;
+    font-size: 25px;
+  }
