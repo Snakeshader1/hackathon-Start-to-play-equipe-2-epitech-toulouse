@@ -38,7 +38,7 @@ $_COOKIE['Name'] = "Sacha";
 			</p>
 		</div>
 		<div id="loupe">
-			<img src="img/loupe.png" width="37px" height="33px">
+			<img src="../../img/loupe.png" width="37px" height="33px">
 		</div>
 	</header>
 

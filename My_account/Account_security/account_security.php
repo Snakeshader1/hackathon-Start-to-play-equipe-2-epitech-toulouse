@@ -65,7 +65,7 @@ if (!empty($_POST['now_password']) AND !empty($_POST['new_password']) AND !empty
 			</p>
 		</div>
 		<div id="loupe">
-			<img src="img/loupe.png" width="37px" height="33px">
+			<img src="../../img/loupe.png" width="37px" height="33px">
 		</div>
 	</header>
 

@@ -38,7 +38,7 @@ $_COOKIE['Name'] = "Sacha";
 			</p>
 		</div>
 		<div id="loupe">
-			<img src="img/loupe.png" width="37px" height="33px">
+			<img src="../../img/loupe.png" width="37px" height="33px">
 		</div>
 	</header>
 
@@ -100,7 +100,7 @@ $_COOKIE['Name'] = "Sacha";
 			<p><?php echo $donnees['Pass number'];?></p>
 		</div>
 		<div class="d">
-			<img src="img/qrcode.png" width="170px" height="170px">
+			<img src="../../img/qrcode.png" width="170px" height="170px">
 		</div>
 	</div>
 	<?php } ?>
