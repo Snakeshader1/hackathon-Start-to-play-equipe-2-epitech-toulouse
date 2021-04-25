@@ -66,21 +66,24 @@ header{
 	font-style: normal;
 	font-weight: normal;
 	font-size: 28px;
-	text-decoration: underline;
-	color: white;
-
 }
-
 #account p{
 	text-decoration: underline;
-	color: white;
-
 }
 #loupe{
 	float: right;
 	width: 5%;
 	padding-top: 2%;
 }
+
+a{
+	text-decoration: none;
+	color: white;
+  }
+a:hover{
+	border-bottom: 5px solid grey;
+	border-radius: 2px;
+  }
 
 #box{
 	position: absolute;
@@ -151,13 +154,7 @@ header{
 	color: white;
 	font-size: 45px;
 }
-h2{
-	padding-left: 23%;
-	color: white;
-	padding-top: 20px;
-	margin-bottom: 30px;
 
-}
 
 a:link {
 	text-decoration: none;
@@ -169,40 +166,71 @@ a:visited {
 	color: white;
   }
 
+/* -------------------------------------------------------------------------------------------- */
 
-/* Main page*/
 
+
+h2{
+	padding-left: 23%;
+	color: white;
+	padding-top: 20px;
+}
 .tickets{
-	background-color: #000000;
+	background-color: #1D2021;
 
 	display: flex;
 	justify-content: flex-start;
 
 	width: 60%;
 	height: 25%;
-	margin-left: 500px;
+	margin-left: 450px;
 	color: white;
-	border-bottom: #111111 solid 7px;
+	margin-top: 30px;
+	margin-bottom: 50px;
 
 }
 .a{
-
-	width: 100%;
-
+	
 	margin-top: 5px;
 	margin-bottom: 5px;
 	font-size: 20px;
 	line-height: 45px;
-	padding-left: 1%;
+	padding-left: 4%;
+	padding-right: 4%;
 	float: left;
+	border-right: solid black 3px;
 
 }
 .b{
-
-	display: flex;
-	justify-content: flex-end;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-size: 20px;
 	line-height: 45px;
-	padding-right: 1%;
+	padding-left: 4%;
+	padding-right: 4%;
+	border-right: solid black 3px;
+	float: left;
+}
+.c{
+	
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-size: 20px;
+	line-height: 45px;
+	padding-left: 4%;
+	padding-right: 4%;
+
+	float: left;
+	border-right: solid black 3px;
+
+}
+.d{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 45px;
+	padding-left: 4%;
+	padding-right: 4%;
 	float: left;
 	padding-top: 5px;
 }

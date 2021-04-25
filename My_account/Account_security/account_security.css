@@ -146,6 +146,16 @@ header{
 	font-size: 45px;
 }
 
+a:link {
+	text-decoration: none;
+	color: white;
+}
+
+a:visited {
+	text-decoration: none;
+	color: white;
+  }
+
 /* ----------------------------------------------- */
 
 

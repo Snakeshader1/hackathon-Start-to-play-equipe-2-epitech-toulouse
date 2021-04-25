@@ -2,7 +2,7 @@
 
 $bdd = new PDO('mysql:host=localhost;dbname=hackathon;charset=utf8', 'root', '');
 
-$_COOKIE['Name'] = "Sasha"; 
+$_COOKIE['Name'] = "Sacha"; 
 
 
 ?>
@@ -12,49 +12,56 @@ $_COOKIE['Name'] = "Sasha";
 <head>
 	<title>My account - transaction</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="account_style.css">
+	<link rel="stylesheet" type="text/css" href="Account_overview.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
 	<header>
 		<div id="hyperloop">
 			<p>
+				<a href="../../nouveau site tec/Index.php">
 				hyperloop
+				</a>
 			</p>
 		</div>
 		<div id="home">
 			<p>
+				<a href="../../nouveau site tec/Index.php">
 				Home
+				</a>
 			</p>
 		</div>
 		<div id="tickets">
 			<p>
+				<a href="../../nouveau site tec/Index.php">
 				Buy tickets
+				</a>
 			</p>
 		</div>
 		<div id="account">
-			<p>
+			<a href="../../../My_account/Account_overview/Account_overview.php">
 				My account
-			</p>
+			</a>
 		</div>
 		<div id="loupe">
-			<img src="img/loupe.png" width="37px" height="33px">
+			<img src="../img/loupe.png" width="37px" height="33px">
 		</div>
 	</header>
 
 	<div id="box">
 		<div id="account_overview">
-			<p>Account overview</p>
+			<p><a href="../Account_overview/Account_overview.php">Account overview</a></p>
 			<div id="petitcube"></div>
 		</div>
 		<div id="transaction">
-			<p>Transactions</p>
+			<p><a href="../transactions/transaction.php">Transactions</a></p>
 		</div>
 		<div id="security">
-			<p>Account security</p>
+			<p><a href="../Account_security/Account_security.php"> Account security</a></p>
+
 		</div>
 		<div id="information">
-			<p>My informations</p>
+			<p><a href="../My_informations/My_information.php"> My informations</a></p>
 		</div>
 	</div>
 	<div id="title">
@@ -69,11 +76,11 @@ $_COOKIE['Name'] = "Sasha";
 
 	<?php 
 
-	$req = $bdd->query('SELECT * FROM billet');
+	// $req = $bdd->query('SELECT * FROM billet');
 
 
-	// $req = $bdd->prepare('SELECT * FROM billet WHERE Name = ?');
-	// $req->execute(array($_COOKIE['Name']));
+	$req = $bdd->prepare('SELECT * FROM billet WHERE Name = ?');
+	$req->execute(array($_COOKIE['Name']));
 
 	while ($donnees = $req->fetch()) {
 
@@ -99,7 +106,7 @@ $_COOKIE['Name'] = "Sasha";
 			<p><?php echo $donnees['Pass number'];?></p>
 		</div>
 		<div class="d">
-			<img src="img/qrcode.png" width="170px" height="170px">
+			<img src="../../img/qrcode.png" width="170px" height="170px">
 		</div>
 	</div>
 	<?php } ?>

@@ -3,7 +3,8 @@
 $bdd = new PDO('mysql:host=localhost;dbname=hackathon;charset=utf8', 'root', '');
 
 $_COOKIE['Name'] = "Sasha"; 
-$_COOKIE['email'] = "Snake@gmail.com";
+$_COOKIE['email'] = "theos123@hotmail.fr";
+
 
 if (!empty($_POST['now_password']) AND !empty($_POST['new_password']) AND !empty($_POST['new_confpassword'])){
 
@@ -14,8 +15,20 @@ if (!empty($_POST['now_password']) AND !empty($_POST['new_password']) AND !empty
 	$req = $bdd->prepare('SELECT * FROM account WHERE Email = ?');
 	$req->execute(array($_COOKIE['email']));
 
+
 	while ($donnees = $req->fetch()) {
-		echo $donnees['mdp'];
+		if($_COOKIE['email'] == $donnees['Email']) {
+			if ($mdp == $donnees['Pass']) {
+				if ($new_mdp == $new_condmdp) {
+
+					$req = $bdd->prepare('UPDATE account SET Pass = :Pass WHERE Email = :Email');
+					$req->execute(array(
+						'Pass' => $new_mdp,
+						'Email' => $_COOKIE['email'],
+						));
+				}
+			}
+		}
 	}
 }
 
@@ -30,45 +43,52 @@ if (!empty($_POST['now_password']) AND !empty($_POST['new_password']) AND !empty
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
-	<header>
+<header>
 		<div id="hyperloop">
 			<p>
+				<a href="../../nouveau site tec/Index.php">
 				hyperloop
+				</a>
 			</p>
 		</div>
 		<div id="home">
 			<p>
+				<a href="../../nouveau site tec/Index.php">
 				Home
+				</a>
 			</p>
 		</div>
 		<div id="tickets">
 			<p>
+				<a href="../../nouveau site tec/Index.php">
 				Buy tickets
+				</a>
 			</p>
 		</div>
 		<div id="account">
-			<p>
+			<a href="../../../My_account/Account_overview/Account_overview.php">
 				My account
-			</p>
+			</a>
 		</div>
 		<div id="loupe">
-			<img src="img/loupe.png" width="37px" height="33px">
+			<img src="../img/loupe.png" width="37px" height="33px">
 		</div>
 	</header>
 
 	<div id="box">
 		<div id="account_overview">
-			<p>Account overview</p>
-			<div id="petitcube"></div>
+			<p><a href="../Account_overview/Account_overview.php">Account overview</a></p>
 		</div>
 		<div id="transaction">
-			<p>Transactions</p>
+			<p><a href="../transactions/transaction.php">Transactions</a></p>
 		</div>
 		<div id="security">
-			<p>Account security</p>
+			<p><a href="../Account_security/Account_security.php"> Account security</a></p>
+			<div id="petitcube"></div>
+
 		</div>
 		<div id="information">
-			<p>My informations</p>
+			<p><a href="../My_informations/My_information.php"> My informations</a></p>
 		</div>
 	</div>
 	<div id="title">
@@ -81,7 +101,7 @@ if (!empty($_POST['now_password']) AND !empty($_POST['new_password']) AND !empty
 
 <!-- ------------------------------------------------------------------------------------------------ -->
 
-		<form methode="post" action="">
+		<form method="post" action="">
 
 		<div class="tickets">
 			<div class="a">
@@ -90,10 +110,10 @@ if (!empty($_POST['now_password']) AND !empty($_POST['new_password']) AND !empty
 				<label for="new_confpassword">confirm the new password<br></label>
 			</div>
 			<div class="b">
-				<input class="button" type="password" name="now_password">
-				<input class="button" type="password" name="new_password">
-				<input class="button" type="password" name="new_confpassword">
-				<input class="submit" type="submit" name="new_confpassword">
+				<input class="button" type="password" name="now_password" required>
+				<input class="button" type="password" name="new_password" required>
+				<input class="button" type="password" name="new_confpassword" required>
+				<input class="submit" type="submit" name="submit" required>
 			</div>
 		</div>
 		</form>

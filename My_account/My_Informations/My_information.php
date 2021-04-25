@@ -2,17 +2,20 @@
 
 $bdd = new PDO('mysql:host=localhost;dbname=hackathon;charset=utf8', 'root', '');
 
-$_COOKIE['Name'] = "Sacha"; 
+$_COOKIE['Name'] = "Sasha"; 
+$_COOKIE['email'] = "theos123@hotmail.fr";
 
+$req = $bdd->prepare('SELECT * FROM account WHERE Email = ?');
+$req->execute(array($_COOKIE['email']));
 
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My account</title>
+	<title>My account - My information</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="transaction.css">
+	<link rel="stylesheet" type="text/css" href="My_informations.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
@@ -39,11 +42,9 @@ $_COOKIE['Name'] = "Sacha";
 			</p>
 		</div>
 		<div id="account">
-			<p>
-				<a href="../../../My_account/Account_overview/Account_overview.php">
-					My account
-				</a>
-			</p>
+			<a href="../../../My_account/Account_overview/Account_overview.php">
+				My account
+			</a>
 		</div>
 		<div id="loupe">
 			<img src="../img/loupe.png" width="37px" height="33px">
@@ -56,48 +57,39 @@ $_COOKIE['Name'] = "Sacha";
 		</div>
 		<div id="transaction">
 			<p><a href="../transactions/transaction.php">Transactions</a></p>
-			<div id="petitcube"></div>
 		</div>
 		<div id="security">
 			<p><a href="../Account_security/Account_security.php"> Account security</a></p>
+
 		</div>
 		<div id="information">
 			<p><a href="../My_informations/My_information.php"> My informations</a></p>
+			<div id="petitcube"></div>
+
 		</div>
 	</div>
-	
+
 	<div id="title">
 		<p>Welcome, <?php echo $_COOKIE['Name']; 
 ?></p>
 	</div>
 	<h2>
-		Your transaction :
+		Your informations :
 	</h2>
 
 <!-- ------------------------------------------------------------------------------------------------ -->
 
+		<div class="tickets">
+			<div class="a">
+				<?php 	while ($donnees = $req->fetch()) { ?>
 
-<?php 
+					<p class="informations">Name : <?php echo $donnees['Name'];?></p>
+					<p class="informations">Username : <?php echo $donnees['Username'];?></p>
+					<p class="informations">Age : <?php echo $donnees['Year_old'];?></p>
+					<p class="informations">Email : <?php echo $donnees['Email'];?></p>
 
-// $req = $bdd->query('SELECT * FROM billet');
-
-
-$req = $bdd->prepare('SELECT * FROM billet WHERE Name = ?');
-$req->execute(array($_COOKIE['Name']));
-
-while ($donnees = $req->fetch()) {
-
-?>
-
-
-	<div class=tickets>
-		<div class="a">
-			<p>From : <?php echo $donnees['Depart']?> => To : <?php echo $donnees['Arrive']?> | <?php echo $donnees['Date']?> | <?php echo $donnees['Boarding_time']?></p>
+				<?php } ?>
+			</div>
 		</div>
-		<div class="b">
-			<p>120€</p> 
-		</div>
-	</div>
 
-<?php } ?>
 </body>

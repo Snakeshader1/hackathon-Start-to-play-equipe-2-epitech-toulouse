@@ -66,13 +66,24 @@ header{
 	text-decoration: none;
 	color: white;
 }
+
+a:link {
+	text-decoration: none;
+	color: white;
+}
+
+a:visited {
+	text-decoration: none;
+	color: white;
+}
+
 #loupe{
 	float: right;
 	width: 5%;
 	padding-top: 2%;
 }
 #europe{
-	background: url(img/europe.png) no-repeat;
+	background: url(../img/europe.png) no-repeat;
 	background-size: 100%;
 	height: 770px;
 }

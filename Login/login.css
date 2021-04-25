@@ -10,10 +10,12 @@
 body{
     background-color: black;
 }
+
 a{
   text-decoration: none;
   color: white;
 }
+
 a:hover{
   border-bottom: 5px solid grey;
   border-radius: 2px;
