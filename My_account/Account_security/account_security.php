@@ -2,7 +2,7 @@
 
 $bdd = new PDO('mysql:host=localhost;dbname=hackathon;charset=utf8', 'root', '');
 
-$_COOKIE['Name'] = "Sasha"; 
+$_COOKIE['Name'] = "Sacha"; 
 $_COOKIE['email'] = "theos123@hotmail.fr";
 
 
@@ -60,9 +60,9 @@ if (!empty($_POST['now_password']) AND !empty($_POST['new_password']) AND !empty
 		</div>
 		<div id="tickets">
 			<p>
-				<a href="../../nouveau site tec/Index.php">
-				Buy tickets
-				</a>
+			<a href="../../buy ticket/buy.html">
+                    Buy Tickets
+                    </a>
 			</p>
 		</div>
 		<div id="account">

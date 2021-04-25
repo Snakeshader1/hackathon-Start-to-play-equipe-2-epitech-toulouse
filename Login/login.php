@@ -79,12 +79,17 @@ if (!empty($_POST['create_username']) AND !empty($_POST['create_email']) AND !em
             </div>
             <div id="home">
                 <p>
-                    Home
+                    <a href="">
+                        Home
+                    </a>
+                    
                 </p>
             </div>
             <div id="tickets">
                 <p>
+                    <a href="../buy ticket/buy.html">
                     Buy Tickets
+                    </a>
                 </p>
             </div>
             <div id="account">

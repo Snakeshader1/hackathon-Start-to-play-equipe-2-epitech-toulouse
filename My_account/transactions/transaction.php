@@ -33,9 +33,9 @@ $_COOKIE['Name'] = "Sacha";
 		</div>
 		<div id="tickets">
 			<p>
-				<a href="../../nouveau site tec/Index.php">
-				Buy tickets
-				</a>
+			<a href="../../buy ticket/buy.html">
+                    Buy Tickets
+                    </a>
 			</p>
 		</div>
 		<div id="account">

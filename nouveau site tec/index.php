@@ -33,9 +33,9 @@ if (isset($_COOKIE['Connection'])){
 		</div>
 		<div id="tickets">
 			<p>
-				<a href="Index.php">
-				Buy tickets
-				</a>
+					<a href="../buy ticket/buy.html">
+                    Buy Tickets
+                    </a>
 			</p>
 		</div>
 		<div id="account">

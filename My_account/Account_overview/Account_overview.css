@@ -39,13 +39,7 @@ header{
 	font-weight: normal;
 	font-size: 28px;
 }
-#home a:hover{
-	text-decoration: underline;
-}
-#home a{
-	text-decoration: none;
-	color: white;
-}
+
 #tickets{
 	float: left;
 	width: 22%;
@@ -76,14 +70,6 @@ header{
 	padding-top: 2%;
 }
 
-a{
-	text-decoration: none;
-	color: white;
-  }
-a:hover{
-	border-bottom: 5px solid grey;
-	border-radius: 2px;
-  }
 
 #box{
 	position: absolute;
@@ -164,6 +150,15 @@ a:link {
 a:visited {
 	text-decoration: none;
 	color: white;
+  }
+
+  a{
+	text-decoration: none;
+	color: white;
+  }
+  a:hover{
+	border-bottom: 5px solid grey;
+	border-radius: 2px;
   }
 
 /* -------------------------------------------------------------------------------------------- */

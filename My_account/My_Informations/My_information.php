@@ -2,11 +2,13 @@
 
 $bdd = new PDO('mysql:host=localhost;dbname=hackathon;charset=utf8', 'root', '');
 
-$_COOKIE['Name'] = "Sasha"; 
+$_COOKIE['Name'] = "Sacha"; 
 $_COOKIE['email'] = "theos123@hotmail.fr";
 
 $req = $bdd->prepare('SELECT * FROM account WHERE Email = ?');
 $req->execute(array($_COOKIE['email']));
+
+
 
 ?>
 
@@ -36,9 +38,9 @@ $req->execute(array($_COOKIE['email']));
 		</div>
 		<div id="tickets">
 			<p>
-				<a href="../../nouveau site tec/Index.php">
-				Buy tickets
-				</a>
+			<a href="../../buy ticket/buy.html">
+                    Buy Tickets
+                    </a>
 			</p>
 		</div>
 		<div id="account">

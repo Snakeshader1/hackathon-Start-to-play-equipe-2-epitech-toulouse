@@ -39,13 +39,11 @@ header{
 	font-weight: normal;
 	font-size: 28px;
 }
-#home a:hover{
+#home {
 	text-decoration: underline;
 }
-#home a{
-	text-decoration: none;
-	color: white;
-}
+
+
 #tickets{
 	float: left;
 	width: 22%;
@@ -55,7 +53,7 @@ header{
 	font-weight: normal;
 	font-size: 28px;
 }
-#tickets p:hover{
+#tickets {
 	text-decoration: underline;
 }
 #account{
@@ -154,6 +152,15 @@ a:link {
 a:visited {
 	text-decoration: none;
 	color: white;
+  }
+
+  a{
+	text-decoration: none;
+	color: white;
+  }
+  a:hover{
+	border-bottom: 5px solid grey;
+	border-radius: 2px;
   }
 
 /* ----------------------------------------------- */
