@@ -19,29 +19,35 @@ $req->execute(array($_COOKIE['email']));
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
-	<header>
+<header>
 		<div id="hyperloop">
 			<p>
+				<a href="../../nouveau site tec/Index.php">
 				hyperloop
+				</a>
 			</p>
 		</div>
 		<div id="home">
 			<p>
+				<a href="../../nouveau site tec/Index.php">
 				Home
+				</a>
 			</p>
 		</div>
 		<div id="tickets">
 			<p>
+				<a href="../../nouveau site tec/Index.php">
 				Buy tickets
+				</a>
 			</p>
 		</div>
 		<div id="account">
-			<p>
+			<a href="../../../My_account/Account_overview/Account_overview.php">
 				My account
-			</p>
+			</a>
 		</div>
 		<div id="loupe">
-			<img src="../../img/loupe.png" width="37px" height="33px">
+			<img src="../img/loupe.png" width="37px" height="33px">
 		</div>
 	</header>
 
