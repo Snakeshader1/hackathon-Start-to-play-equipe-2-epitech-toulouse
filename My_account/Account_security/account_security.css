@@ -78,7 +78,6 @@ header{
 
 #box{
 	position: absolute;
-	position: absolute;
 	width: 357px;
 	height: 299px;
 	left: 38px;
@@ -139,90 +138,86 @@ header{
 	bottom: 11px;
 	background-color: #222627;
 }
+
 #title{
 	padding-top: 200px;
 	text-align: center;
 	color: white;
 	font-size: 45px;
 }
+
+/* ----------------------------------------------- */
+
+
 h2{
 	padding-left: 23%;
 	color: white;
 	padding-top: 20px;
 }
 .tickets{
-	background-color: #1D2021;
-
-	display: flex;
-	justify-content: flex-start;
+	background-color: black;
 
 	width: 60%;
-	height: 25%;
-	margin-left: 450px;
+	height: 1000%;
+	margin-left: 200px;
 	color: white;
 	margin-top: 30px;
 	margin-bottom: 50px;
-
-}
-.a{
 	
-	margin-top: 5px;
-	margin-bottom: 5px;
-	font-size: 20px;
-	line-height: 45px;
-	padding-left: 4%;
-	padding-right: 4%;
-	float: left;
-	border-right: solid black 3px;
 
 }
-.b{
-	margin-top: 5px;
-	margin-bottom: 5px;
-	font-size: 20px;
-	line-height: 45px;
-	padding-left: 4%;
-	padding-right: 4%;
-	border-right: solid black 3px;
-	float: left;
-}
-.c{
-	
-	margin-top: 5px;
-	margin-bottom: 5px;
-	font-size: 20px;
-	line-height: 45px;
-	padding-left: 4%;
-	padding-right: 4%;
 
-	float: left;
-	border-right: solid black 3px;
-
-}
-.d{
+label {
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	justify-content: flex-end;
+
+}
+
+.button {
+	width: 300px;
+	font-size: 20px;
+	border: solid grey 3px;
+	border-radius: 20px;
+}
+
+.submit {
+	width: 200px;
+	height: 50px;
+	background-color: grey;
+	border: solid grey 3px;
+	border-radius: 5px;
+
+}
+
+.a{
+
+	margin-top: 5px;
+	margin-bottom: 5px;
+
+	padding-right: 20px;
+
+	font-size: 20px;
 	line-height: 45px;
-	padding-left: 4%;
-	padding-right: 4%;
+	width: 40%;
+	height: 300px;
+
 	float: left;
-	padding-top: 5px;
+	
+
 }
-#button_left{
-	position: relative;
-	width: 170px;
-	height: 30px;
-	background-color: #3C3C3C;
-	margin-left: 500px;
-	margin-top: 30px;
+
+.b{
+	padding-top: 12px;
+	display: flex;
+	flex-direction : column;
+	justify-content : space-between;
+
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-size: 20px;
+	line-height: 45px;
+	width: 20%;
+
 	float: left;
-}
-#button_right{
-	position: relative;
-	width: 170px;
-	height: 30px;
-	background-color: #3C3C3C;
-	margin-left: 1000px;
-	float: left;
+	height: 188px;
 }
