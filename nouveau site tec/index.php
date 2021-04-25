@@ -1,3 +1,13 @@
+<?php 
+
+if (isset($_COOKIE['Connection'])){
+	$connection = $_COOKIE['Connection'];
+}else {
+	$connection = 0;
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,7 +39,14 @@
 			</p>
 		</div>
 		<div id="account">
-			<a href="../My_account/Account_overview/Account_overview.php">
+			<?php 
+			
+			if ($connection == 1) {
+				echo "<a href='../My_account/Account_overview/Account_overview.php'>";
+			}else {
+				echo "<a href='../Login/login.php'>";
+			}
+			?>
 				My account
 			</a>
 		</div>
@@ -87,25 +104,25 @@
 	<footer>
 		<div id="global">
 			<div>
-				<p>© Hyperloop 2021</p>
+				<p> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">© Hyperloop 2021 </a> </p>
 			</div>
 			<div>
-				<p>Privacy policy</p>
+				<p> <a href="../footer/Privcy Policy.html">Privacy policy </a></p>
 			</div>
 			<div>
-				<p>Terms and conditions</p>
+				<p><a href="../footer/terms and condition.html">  Terms and conditions </a></p>
 			</div>
 			<div>
-				<p>Need help ?</p>
+				<p> <a href="../footer/Password reset"> Need help ? </a></p>
 			</div>
 			<div>
-				<p>Q&A</p>
+				<p> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"> Q&A</a></p>
 			</div>
 			<div>
-				<p>About us</p>
+				<p> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"> About us</a></p>
 			</div>
 			<div>
-				<p>Contact</p>
+				<p> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"> Contact </a></p>
 			</div>
 		</div>
 	</footer>

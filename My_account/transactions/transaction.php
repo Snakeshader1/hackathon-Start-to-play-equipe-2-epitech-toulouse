@@ -39,9 +39,11 @@ $_COOKIE['Name'] = "Sacha";
 			</p>
 		</div>
 		<div id="account">
-			<a href="../../../My_account/Account_overview/Account_overview.php">
-				My account
-			</a>
+			<p>
+				<a href="../../../My_account/Account_overview/Account_overview.php">
+					My account
+				</a>
+			</p>
 		</div>
 		<div id="loupe">
 			<img src="../img/loupe.png" width="37px" height="33px">
