@@ -38,9 +38,7 @@ header{
 	font-weight: normal;
 	font-size: 28px;
 }
-#home p{
-	text-decoration: underline;
-}
+
 #tickets{
 	float: left;
 	width: 22%;
@@ -50,7 +48,7 @@ header{
 	font-weight: normal;
 	font-size: 28px;
 }
-#tickets p:hover{
+#tickets{
 	text-decoration: underline;
 }
 #account{
@@ -62,9 +60,7 @@ header{
 	font-weight: normal;
 	font-size: 28px;
 }
-#account a:hover{
-	text-decoration: underline;
-}
+
 #account a{
 	text-decoration: none;
 	color: white;
@@ -73,6 +69,16 @@ header{
 	float: right;
 	width: 5%;
 	padding-top: 2%;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+a:hover{
+	border-bottom: 5px solid grey;
+	border-radius: 2px;
 }
 
 
@@ -89,7 +95,7 @@ footer div{
 
 /* ------------------------------------ */
 
-#ville_{
+.ville_{
 
 	display: flex;
 
@@ -110,7 +116,7 @@ footer div{
 
 #grey{
 	background-color: grey;
-	height: 400px;
+	height: 1200px;
 	width: 100%;
 }
 
@@ -128,4 +134,17 @@ footer div{
 #map {
 	width: 1520px;
 	height: 880px;
+}
+
+em {
+	color: black;
+}
+
+#submit {
+color: #E8E6E3;
+position: absolute;
+width: 372px;
+height: 81px;
+left: 1370px;
+top: 1656px;
 }
