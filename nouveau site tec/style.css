@@ -7,6 +7,14 @@
 *{
 	margin: 0%;
 }
+a{
+	text-decoration: none;
+	color: white;
+}
+a:hover{
+	border-bottom: 5px solid grey;
+	border-radius: 2px;
+}
 header{
 	overflow: auto;
 	background-color: #1C1F20;
@@ -35,9 +43,6 @@ header{
 	font-weight: normal;
 	font-size: 28px;
 }
-#home p{
-	text-decoration: underline;
-}
 #tickets{
 	float: left;
 	width: 22%;
@@ -47,9 +52,7 @@ header{
 	font-weight: normal;
 	font-size: 28px;
 }
-#tickets p:hover{
-	text-decoration: underline;
-}
+
 #account{
 	float: left;
 	width: 22%;
@@ -58,23 +61,6 @@ header{
 	font-style: normal;
 	font-weight: normal;
 	font-size: 28px;
-}
-#account a:hover{
-	text-decoration: underline;
-}
-#account a{
-	text-decoration: none;
-	color: white;
-}
-
-a:link {
-	text-decoration: none;
-	color: white;
-}
-
-a:visited {
-	text-decoration: none;
-	color: white;
 }
 
 #loupe{
