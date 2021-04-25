@@ -36,14 +36,15 @@
 		<h1>
 			Where do you plan your next trip ?
 		</h1>
-		<img src="../img/europe_point.png">
+		<img id="map" src="../img/europe_point.png">
 	</div>
 	<div id="grey">
 		<div id="ticket">
-			<p>From :Toulouse</p>
+			<div id="ville_">
+			<p>From : Toulouse </p>
 			<form method="post" action="traitement.php">
 			   <p>
-			       <label for="vile">To</label><br />
+			       <label for="vile"> To</label><br />
 			       <select name="ville" id="ville">
 			           <option value="Paris">Paris</option>
 			           <option value="Madrid">Madrid</option>
@@ -55,6 +56,9 @@
 			       </select>
 			   </p>
 			</form>
+		</div>
+
+
 			<p>Price : 120€</p>
 			<p>Distance :678km</p>
 			<p>Estimate time :37min</p>

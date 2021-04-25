@@ -74,35 +74,58 @@ header{
 	width: 5%;
 	padding-top: 2%;
 }
+
+
+/* ------------------------------------ */
+
+
 footer div{
 	display: inline-block;
 	width: 20%;
 	padding-top: 1%;
 	text-align: center;
 }
+
+
+/* ------------------------------------ */
+
+#ville_{
+
+	display: flex;
+
+}
+
 #global{
 	height: 100px;
 	width: 100%;
 	background-color: #232728;
 	color: white;
 }
+
 #europe{
 	padding-top: 170px;
 	text-align: center;
 	color: white;
 }
+
 #grey{
 	background-color: grey;
 	height: 400px;
 	width: 100%;
 }
+
 #ticket{
 	float: left;
 	position: absolute;
-	top: 1400px;
+	top: 1100px;
 	left: 10%;
 	background-color: black;
 	height: 30%;
 	width: 80%;
 	color: white;
+}
+
+#map {
+	width: 1520px;
+	height: 880px;
 }
