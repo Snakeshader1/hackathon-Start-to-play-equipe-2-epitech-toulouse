@@ -76,6 +76,15 @@ header{
 	padding-top: 2%;
 }
 
+a{
+	text-decoration: none;
+	color: white;
+  }
+a:hover{
+	border-bottom: 5px solid grey;
+	border-radius: 2px;
+  }
+
 #box{
 	position: absolute;
 	position: absolute;
@@ -145,6 +154,8 @@ header{
 	color: white;
 	font-size: 45px;
 }
+
+
 a:link {
 	text-decoration: none;
 	color: white;
