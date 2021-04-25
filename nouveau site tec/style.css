@@ -162,14 +162,14 @@ a:visited {
 	padding-top: 200px;
 }
 #global{
-	height: 100px;
-	width: 100%;
-	background-color: #232728;
-	color: white;
+    height: 100px;
+    width: 100%;
+    background-color: #232728;
+    color: white;
 }
 footer div{
-	display: inline-block;
-	width: 20%;
-	padding-top: 1%;
-	text-align: center;
+    display: inline-block;
+    width: 20%;
+    padding-top: 1%;
+    text-align: center;
 }
