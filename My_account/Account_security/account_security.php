@@ -3,7 +3,21 @@
 $bdd = new PDO('mysql:host=localhost;dbname=hackathon;charset=utf8', 'root', '');
 
 $_COOKIE['Name'] = "Sasha"; 
+$_COOKIE['email'] = "Snake@gmail.com";
 
+if (!empty($_POST['now_password']) AND !empty($_POST['new_password']) AND !empty($_POST['new_confpassword'])){
+
+	$mdp = $_POST['now_password'];
+	$new_mdp = $_POST['new_password'];
+	$new_condmdp = $_POST['new_confpassword'];
+
+	$req = $bdd->prepare('SELECT * FROM account WHERE Email = ?');
+	$req->execute(array($_COOKIE['email']));
+
+	while ($donnees = $req->fetch()) {
+		echo $donnees['mdp'];
+	}
+}
 
 ?>
 
@@ -12,7 +26,7 @@ $_COOKIE['Name'] = "Sasha";
 <head>
 	<title>My account - transaction</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="account_style.css">
+	<link rel="stylesheet" type="text/css" href="account_security.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
@@ -62,45 +76,26 @@ $_COOKIE['Name'] = "Sasha";
 ?></p>
 	</div>
 	<h2>
-		Your tickets :
+		Account security :
 	</h2>
 
 <!-- ------------------------------------------------------------------------------------------------ -->
 
-	<?php 
+		<form methode="post" action="">
 
-	// $req = $bdd->query('SELECT * FROM billet');
-
-
-	$req = $bdd->prepare('SELECT * FROM billet WHERE Name = ?');
-	$req->execute(array($_COOKIE['Name']));
-
-	while ($donnees = $req->fetch()) {
-
-	?>
-
-	<div class="tickets">
-		<div class="a">
-			<p>From : <?php echo $donnees['Depart'];?></p>
-			<p>To : <?php echo $donnees['Arrive'];?></p>
-			<p>Est. duration :</p>
-			<p><?php echo $donnees['Est_duration'];?></p>
+		<div class="tickets">
+			<div class="a">
+				<label for="now_password"> Actualy password <br></label>
+				<label for="new_password">New password <br></label>
+				<label for="new_confpassword">confirm the new password<br></label>
+			</div>
+			<div class="b">
+				<input class="button" type="password" name="now_password">
+				<input class="button" type="password" name="new_password">
+				<input class="button" type="password" name="new_confpassword">
+				<input class="submit" type="submit" name="new_confpassword">
+			</div>
 		</div>
-		<div class="b">
-			<p>Seat : <?php echo $donnees['Seat'];?></p>
-			<p>Gate : <?php echo $donnees['Gate'];?></p>
-			<p>BOARDING TIME :</p>
-			<p><?php echo $donnees['Boarding_time'];?></p>
-		</div>
-		<div class="c">
-			<p>Name : <?php echo $donnees['Name'];?></p>
-			<p>Date : <?php echo $donnees['Date'];?></p>
-			<p>Pass number : </p>
-			<p><?php echo $donnees['Pass number'];?></p>
-		</div>
-		<div class="d">
-			<img src="img/qrcode.png" width="170px" height="170px">
-		</div>
-	</div>
-	<?php } ?>
+		</form>
+
 </body>

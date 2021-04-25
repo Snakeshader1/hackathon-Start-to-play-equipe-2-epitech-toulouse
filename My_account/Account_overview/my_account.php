@@ -69,11 +69,11 @@ $_COOKIE['Name'] = "Sasha";
 
 	<?php 
 
-	// $req = $bdd->query('SELECT * FROM billet');
+	$req = $bdd->query('SELECT * FROM billet');
 
 
-	$req = $bdd->prepare('SELECT * FROM billet WHERE Name = ?');
-	$req->execute(array($_COOKIE['Name']));
+	// $req = $bdd->prepare('SELECT * FROM billet WHERE Name = ?');
+	// $req->execute(array($_COOKIE['Name']));
 
 	while ($donnees = $req->fetch()) {
 
