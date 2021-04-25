@@ -5,41 +5,17 @@ $bdd = new PDO('mysql:host=localhost;dbname=hackathon;charset=utf8', 'root', '')
 $_COOKIE['Name'] = "Sasha"; 
 $_COOKIE['email'] = "theos123@hotmail.fr";
 
-
-if (!empty($_POST['now_password']) AND !empty($_POST['new_password']) AND !empty($_POST['new_confpassword'])){
-
-	$mdp = $_POST['now_password'];
-	$new_mdp = $_POST['new_password'];
-	$new_condmdp = $_POST['new_confpassword'];
-
-	$req = $bdd->prepare('SELECT * FROM account WHERE Email = ?');
-	$req->execute(array($_COOKIE['email']));
-
-
-	while ($donnees = $req->fetch()) {
-		if($_COOKIE['email'] == $donnees['Email']) {
-			if ($mdp == $donnees['Pass']) {
-				if ($new_mdp == $new_condmdp) {
-
-					$req = $bdd->prepare('UPDATE account SET Pass = :Pass WHERE Email = :Email');
-					$req->execute(array(
-						'Pass' => $new_mdp,
-						'Email' => $_COOKIE['email'],
-						));
-				}
-			}
-		}
-	}
-}
+$req = $bdd->prepare('SELECT * FROM account WHERE Email = ?');
+$req->execute(array($_COOKIE['email']));
 
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My account - transaction</title>
+	<title>My account - My information</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="account_security.css">
+	<link rel="stylesheet" type="text/css" href="My_informations.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
@@ -78,38 +54,36 @@ if (!empty($_POST['now_password']) AND !empty($_POST['new_password']) AND !empty
 		</div>
 		<div id="security">
 			<p><a href="../Account_security/Account_security.php"> Account security</a></p>
-			<div id="petitcube"></div>
 
 		</div>
 		<div id="information">
 			<p><a href="../My_informations/My_information.php"> My informations</a></p>
+			<div id="petitcube"></div>
+
 		</div>
 	</div>
+
 	<div id="title">
 		<p>Welcome, <?php echo $_COOKIE['Name']; 
 ?></p>
 	</div>
 	<h2>
-		Account security :
+		Your informations :
 	</h2>
 
 <!-- ------------------------------------------------------------------------------------------------ -->
 
-		<form method="post" action="">
-
 		<div class="tickets">
 			<div class="a">
-				<label for="now_password"> Actualy password <br></label>
-				<label for="new_password">New password <br></label>
-				<label for="new_confpassword">confirm the new password<br></label>
-			</div>
-			<div class="b">
-				<input class="button" type="password" name="now_password" required>
-				<input class="button" type="password" name="new_password" required>
-				<input class="button" type="password" name="new_confpassword" required>
-				<input class="submit" type="submit" name="submit" required>
+				<?php 	while ($donnees = $req->fetch()) { ?>
+
+					<p class="informations">Name : <?php echo $donnees['Name'];?></p>
+					<p class="informations">Username : <?php echo $donnees['Username'];?></p>
+					<p class="informations">Age : <?php echo $donnees['Year_old'];?></p>
+					<p class="informations">Email : <?php echo $donnees['Email'];?></p>
+
+				<?php } ?>
 			</div>
 		</div>
-		</form>
 
 </body>

@@ -1,9 +1,30 @@
+<?php 
+
+$bdd = new PDO('mysql:host=localhost;dbname=hackathon;charset=utf8', 'root', '');
+
+if (!empty($_POST['email']) AND !empty($_POST['name'])){
+
+}
+
+if (!empty($_POST['create_username']) AND !empty($_POST['create_email']) AND !empty($_POST['create_name']) AND !empty($_POST['create_password']) AND !empty($_POST['create_confirmpassword']) AND !empty($_POST['create_age'])){
+
+    $username = $_POST['create_username'];
+    $email = $_POST['create_email'];
+    $name = $_POST['create_name'];
+    $password = $_POST['create_password'];
+    $confirm_password = $_POST['create_confirmpassword'];
+    $age = $_POST['create_age'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>My Account</title>
     <link rel="stylesheet" type="text/css" href="login.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 </head>
 <body>
     <header>
@@ -40,26 +61,30 @@
             <p>You are not currently logged in.</p>
         </div>
 
-        <form method="post" action"">
+        <!-- -------------------------------SIGN IN ---------------- -->
 
-        <div id="form">
-            <label for="email">E-mail</label>
+        <form method="post" action="">
+
+            <div id="form">
+
+                <label for="email">E-mail</label>
                 <input type="email" id="formail" maxlength="64" required
                     placeholder="mail@gmail.com" pattern=".+@gmail.com" size="20" required>
-        </br>
-            <label for= "password">Password</label>
-            <input type="password" id="forpass" name="password"
-                   minlength="8" required>
+                </br>
+                <label for= "password">Password</label>
+                <input type="password" id="forpass" name="password"
+                    minlength="8" required>
 
-        </br>
-        <label class="container">Stay logged in
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-          </label>
-        <label class="container">Remember email
-            <input type="checkbox">
-            <span class="checkmark"></span>
-          </label>
+                </br>
+                <label class="container">Stay logged in
+                <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+    
+                </label>
+                <label class="container">Remember email
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
         </div>
         <input type="submit" class="button" value="">
 
@@ -69,33 +94,33 @@
 
         </div>
 
-        <form method="post" action"">
+        <form method="post" action="">
 
             <div id="form2">
                 <label for="username">Username</label>
-                    <input type="username" id="forusername" maxlength="12" required
+                    <input type="username" id="forusername" maxlength="12" name="create_username" required
                         placeholder="username" size="20" required>
             </br>
                 <label for="email">E-mail</label>
-                    <input type="username" id="formail1" maxlenght="64" required
+                    <input type="username" id="formail1" maxlenght="64" name="create_E-mail" required
                         placeholder="mail@gmail.com" pattern=".+@gmail.com" size="20" required>
             </br>
                 <label for="email">Name</label>
-                    <input type="name" id="forname" maxlenght="25" required
+                    <input type="name" id="forname" maxlenght="25" name="create_Name" required
                         placeholder="Jean Moulin" size="20" required>
             </br>
                 <label for="password">Password</label>
-                    <input type="password" id="forpass1"name="password" 
+                    <input type="password" id="forpass1" name="create_password" 
                         minlength="8" required>
             <br>
                 <label for="password">Confirm password</label>
-                    <input type="password" id="forconfirmpass" name="confirmpassword"
+                    <input type="password" id="forconfirmpass" name="create_confirmpassword"
                         minlength="8" required>
             <br>
             <div id="ageco">
                 <label for="age">Age</label>
             </div>
-                    <input type="number" id="forage" name="age"
+                    <input type="number" id="forage" name="create_age"
                         maxlength="2" required>
             </div>
 

@@ -44,20 +44,20 @@ $_COOKIE['Name'] = "Sacha";
 
 	<div id="box">
 		<div id="account_overview">
-			<p>Account overview</p>
+			<p><a href="../Account_overview/Account_overview.php">Account overview</a></p>
 		</div>
 		<div id="transaction">
-			<p>Transactions</p>
+			<p><a href="../transactions/transaction.php">Transactions</a></p>
 			<div id="petitcube"></div>
-
 		</div>
 		<div id="security">
-			<p>Account security</p>
+			<p><a href="../Account_security/Account_security.php"> Account security</a></p>
 		</div>
 		<div id="information">
-			<p>My informations</p>
+			<p><a href="../My_informations/My_information.php"> My informations</a></p>
 		</div>
 	</div>
+	
 	<div id="title">
 		<p>Welcome, <?php echo $_COOKIE['Name']; 
 ?></p>

@@ -78,6 +78,7 @@ header{
 
 #box{
 	position: absolute;
+	position: absolute;
 	width: 357px;
 	height: 299px;
 	left: 38px;
@@ -138,14 +139,12 @@ header{
 	bottom: 11px;
 	background-color: #222627;
 }
-
 #title{
 	padding-top: 200px;
 	text-align: center;
 	color: white;
 	font-size: 45px;
 }
-
 a:link {
 	text-decoration: none;
 	color: white;
@@ -156,7 +155,8 @@ a:visited {
 	color: white;
   }
 
-/* ----------------------------------------------- */
+/* -------------------------------------------------------------------------------------------- */
+
 
 
 h2{
@@ -165,69 +165,78 @@ h2{
 	padding-top: 20px;
 }
 .tickets{
-	background-color: black;
+	background-color: #1D2021;
+
+	display: flex;
+	justify-content: flex-start;
 
 	width: 60%;
-	height: 1000%;
-	margin-left: 200px;
+	height: 25%;
+	margin-left: 450px;
 	color: white;
 	margin-top: 30px;
 	margin-bottom: 50px;
-	
 
 }
-
-label {
-	display: flex;
-	justify-content: flex-end;
-
-}
-
-.button {
-	width: 300px;
-	font-size: 20px;
-	border: solid grey 3px;
-	border-radius: 20px;
-}
-
-.submit {
-	width: 200px;
-	height: 50px;
-	background-color: grey;
-	border: solid grey 3px;
-	border-radius: 5px;
-
-}
-
 .a{
-
+	
 	margin-top: 5px;
 	margin-bottom: 5px;
-
-	padding-right: 20px;
-
 	font-size: 20px;
 	line-height: 45px;
-	width: 40%;
-	height: 300px;
-
+	padding-left: 4%;
+	padding-right: 4%;
 	float: left;
-	
+	border-right: solid black 3px;
 
 }
-
 .b{
-	padding-top: 12px;
-	display: flex;
-	flex-direction : column;
-	justify-content : space-between;
-
 	margin-top: 5px;
 	margin-bottom: 5px;
 	font-size: 20px;
 	line-height: 45px;
-	width: 20%;
+	padding-left: 4%;
+	padding-right: 4%;
+	border-right: solid black 3px;
+	float: left;
+}
+.c{
+	
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-size: 20px;
+	line-height: 45px;
+	padding-left: 4%;
+	padding-right: 4%;
 
 	float: left;
-	height: 188px;
+	border-right: solid black 3px;
+
+}
+.d{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 45px;
+	padding-left: 4%;
+	padding-right: 4%;
+	float: left;
+	padding-top: 5px;
+}
+#button_left{
+	position: relative;
+	width: 170px;
+	height: 30px;
+	background-color: #3C3C3C;
+	margin-left: 500px;
+	margin-top: 30px;
+	float: left;
+}
+#button_right{
+	position: relative;
+	width: 170px;
+	height: 30px;
+	background-color: #3C3C3C;
+	margin-left: 1000px;
+	float: left;
 }
