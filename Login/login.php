@@ -21,8 +21,8 @@ if (!empty($_POST['email']) AND !empty($_POST['password'])){
     }
 }
 
+
 if (!empty($_POST['create_username']) AND !empty($_POST['create_email']) AND !empty($_POST['create_name']) AND !empty($_POST['create_password']) AND !empty($_POST['create_confirmpassword']) AND !empty($_POST['create_age'])){
-    echo "L'fgdgfdgfdsgfdngjkfdnjhgfsndjgndfj";
 
     $username = $_POST['create_username'];
     $email = $_POST['create_email'];
@@ -35,7 +35,6 @@ if (!empty($_POST['create_username']) AND !empty($_POST['create_email']) AND !em
 
     while ($donne = $req->fetch()) {
        if ($email === $donne['Email']) {  // 1er test voir si l'adress mail n'est pas déja utilisé . 
-          echo "L'email est déja inscrit dans la base de donné , redirection dans 5s ou cliqué <a href='login.php'>ici</a>";
           
           
           header('Refresh: 5; url=login.php'); 
@@ -52,7 +51,6 @@ if (!empty($_POST['create_username']) AND !empty($_POST['create_email']) AND !em
            'Year_old' => $age,
            ));
 
-           echo "L'fhggfhfgfhghgfhfhgfddddddddddddddddddddddddddddddddddddgdgfdgfdsgfdngjkfdnjhgfsndjgndfj";
 
         setcookie('email', $email, time() + 365*24*3600,'/', null, false, true);
         setcookie('name', $name, time() + 365*24*3600,'/', null, false, true);
@@ -67,11 +65,9 @@ if (!empty($_POST['create_username']) AND !empty($_POST['create_email']) AND !em
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <title>My Account</title>
     <link rel="stylesheet" type="text/css" href="login.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
 </head>
 <body>
     <header>
@@ -97,7 +93,7 @@ if (!empty($_POST['create_username']) AND !empty($_POST['create_email']) AND !em
                 </p>
             </div>
             <div id="loupe">
-                <img src="../img/loupe.png" width="37px" height="33px">
+                <img src="loupe.png" width="37px" height="33px">
             </div>
         </div>
     </nav>
@@ -108,40 +104,38 @@ if (!empty($_POST['create_username']) AND !empty($_POST['create_email']) AND !em
             <p>You are not currently logged in.</p>
         </div>
 
-        <!-- -------------------------------SIGN IN ---------------- -->
+        <form method="post" action"">
 
-        <form method="post" action="">
-
-            <div id="form">
-
-                <label for="email">E-mail</label>
+        <div id="form">
+            <label for="email">E-mail</label>
                 <input type="email" id="formail" maxlength="64" name="email" required
-                    placeholder="mail@gmail.com"  size="20" required>
-                </br>
-                <label for= "password">Password</label>
-                <input type="password" id="forpass" name="password"
-                    minlength="8" required>
+                    placeholder="mail@gmail.com" pattern=".+@gmail.com" size="20" required>
+        </br>
+            <label for= "password">Password</label>
+            <input type="password" id="forpass" name="password"
+                   minlength="8" required>
 
-                </br>
-                <label class="container">Stay logged in
-                <input type="checkbox" checked="checked">
-                    <span class="checkmark"></span>
-    
-                </label>
-                <label class="container">Remember email
-                    <input type="checkbox">
-                    <span class="checkmark"></span>
-                </label>
+        </br>
+        <label class="container">Stay logged in
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+          </label>
+        <label class="container">Remember email
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
         </div>
         <input type="submit" class="button" value="">
 
+
+        <!-- /* ---------------------------------------------------------------------------------*/ -->
         <div id="para2">           
         </form>
             <p>New account</p>
 
         </div>
 
-        <form method="post" action="">
+        <form method="post" action"">
 
             <div id="form2">
                 <label for="username">Username</label>
@@ -150,14 +144,14 @@ if (!empty($_POST['create_username']) AND !empty($_POST['create_email']) AND !em
             </br>
                 <label for="email">E-mail</label>
                     <input type="username" id="formail1" maxlenght="64" name="create_email" required
-                        placeholder="mail@gmail.com" size="20" required>
+                        placeholder="mail@gmail.com" pattern=".+@gmail.com" size="20" required>
             </br>
                 <label for="email">Name</label>
                     <input type="name" id="forname" maxlenght="25" name="create_name" required
                         placeholder="Jean Moulin" size="20" required>
             </br>
                 <label for="password">Password</label>
-                    <input type="password" id="forpass1" name="create_password" 
+                    <input type="password" id="forpass1"name="create_password" 
                         minlength="8" required>
             <br>
                 <label for="password">Confirm password</label>
